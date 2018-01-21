@@ -1,0 +1,23 @@
+.Clock {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.date {
+  font-size: 28px;
+  font-weight: 200;
+  color: #c4b998;
+}
+
+.time {
+  font-size: 120px;
+  color: rgb(103, 71, 31);
+  background: -webkit-linear-gradient(
+    bottom,
+    rgb(103, 71, 31),
+    rgb(203, 172, 98)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

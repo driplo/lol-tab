@@ -1,0 +1,48 @@
+.popin--options {
+  width: 400px;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  right: 25px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  background-color: #111318;
+  color: #937341;
+  padding: 5px;
+  width: 200px;
+}
+
+.input-wrapper input {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  padding-left: 35px;
+  border: 0;
+  background: transparent;
+  color: #937341;
+}
+
+.option-champ {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #c4b998;
+  font-weight: 300;
+  transition: all 0.15s ease-in-out;
+}
+
+.option-champ:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding-left: 10px;
+}
+
+.option-champ img {
+  margin-right: 8px;
+}

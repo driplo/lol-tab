@@ -1,0 +1,33 @@
+.Panel {
+  background-color: #111318;
+  border: 1px solid #31271e;
+  min-width: 400px;
+  max-width: 500px;
+  color: #c4b998;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid #31271e;
+  color: #937341;
+  text-align: center;
+  font-size: 14px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.Panel__inner {
+  max-height: 250px;
+  min-height: 275px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.Panel__inner ul {
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  display: inline-block;
+  margin-left: 10px;
+}
