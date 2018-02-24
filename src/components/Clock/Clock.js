@@ -2,24 +2,19 @@ import React, { Component } from 'react'
 import moment from 'moment'
 import './Clock.css'
 
+const setDateTime = () => ({
+  time: moment().format('HH:mm'),
+  date: moment().format('LL'),
+})
+
 class Clock extends Component {
   constructor() {
     super()
-    this.state = {
-      time: moment().format('HH:mm'),
-      date: moment().format('LL'),
-    }
+    this.state = setDateTime()
   }
 
   componentDidMount() {
-    this.intervalClock = setInterval(
-      () =>
-        this.setState({
-          date: moment().format('LL'),
-          time: moment().format('HH:mm'),
-        }),
-      1000,
-    )
+    this.intervalClock = setInterval(() => this.setState(setDateTime()), 1000)
   }
 
   componentWillUnmount() {

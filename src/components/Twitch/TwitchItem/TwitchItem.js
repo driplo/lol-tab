@@ -16,7 +16,7 @@ const Item = ({ name, img, viewers, title, link }) => (
           </span>
         </div>
         <div className="description">
-          <p class="title">{title}</p>
+          <p className="title">{title}</p>
         </div>
       </div>
     </a>

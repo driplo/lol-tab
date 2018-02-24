@@ -1,9 +1,9 @@
+import './OptionsPopin.css'
 import React, { Component } from 'react'
 import Autocomplete from 'react-autocomplete'
-import './OptionsPopin.css'
-import skins from '../../../data/skins.json'
 import championOptions from '../../../data/championList.js'
 import conf from '../../../config'
+import skins from '../../../data/skins.json'
 
 const menuStyle = {
   borderRadius: '0',
@@ -66,9 +66,7 @@ class OptionsPopin extends Component {
   renderInput(props) {
     const img =
       this.state.selected.value !== 'random'
-        ? `${conf.cdn}/${conf.patch}/img/champion/${
-            this.state.selected.value
-          }.png`
+        ? `${conf.cdn}/${conf.patch}/img/champion/${this.state.selected.value}.png`
         : '/random.png'
     return (
       <div className="input-wrapper">

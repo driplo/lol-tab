@@ -1,14 +1,11 @@
 import champions from './champions.json'
-import _ from 'lodash'
+import { sortBy, keys } from 'lodash'
 
-const objKeys = Object.keys(champions.data)
-const formattedOptions = objKeys.map(key => {
-  return {
-    value: key,
-    label: champions.data[key].name,
-  }
-})
+const formattedOptions = keys(champions.data).map(key => ({
+  value: key,
+  label: champions.data[key].name,
+}))
 
-const sortedChampions = _.sortBy(formattedOptions, 'label')
+const sortedChampions = sortBy(formattedOptions, 'label')
 
 export default sortedChampions

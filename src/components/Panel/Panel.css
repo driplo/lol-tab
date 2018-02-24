@@ -1,3 +1,9 @@
+.PanelsWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
 .Panel {
   background-color: #111318;
   border: 1px solid #31271e;
@@ -12,7 +18,7 @@ header {
   color: #937341;
   text-align: center;
   font-size: 14px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .Panel__inner {

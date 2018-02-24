@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Container from './layouts/Container'
+import BackgroundSplash from './layouts/BackgroundSplash'
 import OptionButton from './components/Options/OptionsButton/OptionButton'
 import Clock from './components/Clock/Clock'
-import PanelContainer from './components/PanelContainer/PanelContainer'
+import PanelsWrapper from './components/PanelsWrapper/PanelsWrapper'
 import Reddit from './components/Reddit/Reddit'
 import Twitch from './components/Twitch/Twitch'
 import OptionsPopin from './components/Options/OptionsPopin/OptionsPopin'
@@ -27,15 +27,15 @@ class App extends Component {
     const { splash } = this.state
 
     return (
-      <Container splash={splash}>
+      <BackgroundSplash splash={splash}>
         {/* <OptionButton /> */}
         <Clock />
-        <PanelContainer>
+        <PanelsWrapper>
           <Reddit />
           <Twitch />
-        </PanelContainer>
+        </PanelsWrapper>
         {/* <OptionsPopin /> */}
-      </Container>
+      </BackgroundSplash>
     )
   }
 }

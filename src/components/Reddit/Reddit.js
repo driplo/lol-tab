@@ -33,10 +33,7 @@ class Reddit extends Component {
     const { loading, threads } = this.state
 
     return (
-      <Panel
-        title="/r/LeagueOfLegends"
-        link="https://www.reddit.com/r/leagueoflegends"
-      >
+      <Panel title="/r/LeagueOfLegends" link="https://www.reddit.com/r/leagueoflegends">
         {loading ? (
           <Loader />
         ) : (
