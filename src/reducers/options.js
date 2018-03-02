@@ -2,7 +2,7 @@ const defaultState = {
   optionBoxActive: false,
 }
 
-const options = (state = defaultState, action) => {
+const optionsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case 'TOGGLE_OPTIONBOX':
       return { ...state, optionBoxActive: !state.optionBoxActive }
@@ -11,4 +11,4 @@ const options = (state = defaultState, action) => {
   }
 }
 
-export default options
+export default optionsReducer

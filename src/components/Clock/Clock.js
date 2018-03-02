@@ -1,28 +1,30 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { format } from 'date-fns'
 import './Clock.css'
 
-const getlocaleDate = () =>
-  new Date().toLocaleDateString(navigator.locale, {
+const getlocaleDate = locale =>
+  new Date().toLocaleDateString(locale, {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   })
 
-const setDateTime = () => ({
+const setDateTime = locale => ({
   time: format(new Date(), 'HH:mm'),
-  date: getlocaleDate(),
+  date: getlocaleDate(locale),
 })
 
 class Clock extends Component {
-  constructor() {
+  constructor(props) {
     super()
     this.state = setDateTime()
   }
 
   componentDidMount() {
-    this.intervalClock = setInterval(() => this.setState(setDateTime()), 1000)
+    const { locale } = this.props
+    this.intervalClock = setInterval(() => this.setState(setDateTime(locale)), 1000)
   }
 
   componentWillUnmount() {
@@ -41,4 +43,8 @@ class Clock extends Component {
   }
 }
 
-export default Clock
+const mapStateToProps = state => ({
+  locale: state.configReducer.LOCALE,
+})
+
+export default connect(mapStateToProps)(Clock)

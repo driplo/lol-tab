@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { setLanguage } from './actions/config'
+
 import BackgroundSplash from './layouts/BackgroundSplash'
-import OptionButton from './components/Options/OptionsButton/OptionButton'
 import Clock from './components/Clock/Clock'
+import OptionButton from './components/Options/OptionsButton/OptionButton'
+import OptionsPopin from './components/Options/OptionsPopin/OptionsPopin'
 import PanelsWrapper from './components/PanelsWrapper/PanelsWrapper'
 import Reddit from './components/Reddit/Reddit'
 import Twitch from './components/Twitch/Twitch'
-import OptionsPopin from './components/Options/OptionsPopin/OptionsPopin'
 
 class App extends Component {
   constructor() {
@@ -13,6 +16,10 @@ class App extends Component {
     this.state = {
       splash: '',
     }
+  }
+
+  componentWillMount() {
+    setLanguage(this.props)
   }
 
   componentDidMount() {
@@ -40,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default connect()(App)

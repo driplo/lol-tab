@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import options from './options'
+import optionsReducer from './options'
+import configReducer from './config'
 
 const tabStore = combineReducers({
-  options,
+  optionsReducer,
+  configReducer,
 })
 
 export default tabStore

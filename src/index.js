@@ -5,9 +5,13 @@ import { createStore } from 'redux'
 import tabStore from './reducers'
 import './index.css'
 import App from './App'
-import registerServiceWorker from './registerServiceWorker'
 
-let store = createStore(tabStore)
+/* eslint-disable no-underscore-dangle */
+const store = createStore(
+  tabStore,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+)
+/* eslint-enable */
 
 ReactDOM.render(
   <Provider store={store}>
@@ -15,4 +19,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 )
-registerServiceWorker()
