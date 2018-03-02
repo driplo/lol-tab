@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
-import moment from 'moment'
+import { format } from 'date-fns'
 import './Clock.css'
 
+const getlocaleDate = () =>
+  new Date().toLocaleDateString(navigator.locale, {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+
 const setDateTime = () => ({
-  time: moment().format('HH:mm'),
-  date: moment().format('LL'),
+  time: format(new Date(), 'HH:mm'),
+  date: getlocaleDate(),
 })
 
 class Clock extends Component {
