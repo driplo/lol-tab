@@ -24,7 +24,10 @@ class Clock extends Component {
 
   componentDidMount() {
     const { locale } = this.props
-    this.intervalClock = setInterval(() => this.setState(setDateTime(locale)), 1000)
+    this.intervalClock = setInterval(
+      () => this.setState(setDateTime(locale)),
+      1000,
+    )
   }
 
   componentWillUnmount() {
@@ -44,7 +47,7 @@ class Clock extends Component {
 }
 
 const mapStateToProps = state => ({
-  locale: state.configReducer.LOCALE,
+  locale: state.CONFIG.LOCALE,
 })
 
 export default connect(mapStateToProps)(Clock)

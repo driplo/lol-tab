@@ -16,7 +16,6 @@ const Panel = ({ children, title, link }) => (
 
 const PanelLink = ({ link, icon }) => (
   <a href={link} target="_blank" className="link">
-    {console.log(link)}
     <img src={icon} width="10px" alt={`Go to ${link}`} />
   </a>
 )

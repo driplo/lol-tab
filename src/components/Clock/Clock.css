@@ -13,7 +13,11 @@
 .time {
   font-size: 120px;
   color: rgb(103, 71, 31);
-  background: -webkit-linear-gradient(bottom, rgb(103, 71, 31), rgb(203, 172, 98));
+  background: -webkit-linear-gradient(
+    bottom,
+    rgb(103, 71, 31),
+    rgb(203, 172, 98)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

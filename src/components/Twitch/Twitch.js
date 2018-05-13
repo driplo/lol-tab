@@ -18,7 +18,6 @@ class Reddit extends Component {
           streams: response.data,
           loading: false,
         })
-        console.log(response.data)
       })
       .catch(error => {
         console.error(error)

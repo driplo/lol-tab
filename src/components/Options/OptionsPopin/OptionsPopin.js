@@ -66,7 +66,9 @@ class OptionsPopin extends Component {
   renderInput(props) {
     const img =
       this.state.selected.value !== 'random'
-        ? `${conf.cdn}/${conf.patch}/img/champion/${this.state.selected.value}.png`
+        ? `${conf.cdn}/${conf.patch}/img/champion/${
+            this.state.selected.value
+          }.png`
         : '/random.png'
     return (
       <div className="input-wrapper">
